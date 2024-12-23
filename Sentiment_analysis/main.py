@@ -8,20 +8,20 @@ from train import train_model, evaluate_model
 def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
-    # Step 1: Load the dataset
+    #Load the dataset
     train_dataset, test_dataset, tokenizer = preprocess_dataset()
     train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=16)
 
-    # Step 2: Initialize the model
+    #Initialize the model
     model_name = "bert-base-uncased"  # Use GPT or LLaMA-small similarly
     model = TransformerClassifier(model_name=model_name, num_classes=2).to(device)
 
-    # Step 3: Define optimizer and loss function
+    #Define optimizer and loss function
     optimizer = torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), lr=2e-5)
     criterion = nn.CrossEntropyLoss()
 
-    # Step 4: Train the model
+    #Train the model
     epochs = 3
     for epoch in range(epochs):
         train_loss = train_model(model, train_loader, optimizer, criterion, device)
