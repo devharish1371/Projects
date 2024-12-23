@@ -1,3 +1,5 @@
+import torch
+
 def train_model(model, train_loader, optimizer, criterion, device):
     model.train()
     total_loss = 0
