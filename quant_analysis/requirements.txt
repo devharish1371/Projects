@@ -1,0 +1,10 @@
+yfinance
+pandas
+numpy
+yahoo_fin
+requests
+sentence-transformers
+faiss-cpu
+groq
+openai
+

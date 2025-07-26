@@ -1,0 +1,18 @@
+
+
+
+# Market data
+TICKER = "TSLA"
+BENCHMARK = "SPY"
+START_DATE = "2022-01-01"
+END_DATE = "2025-07-01"
+
+# Anomaly detection thresholds
+Z_THRESHOLD = 2.5
+VOL_WINDOW = 10
+VOL_MULTIPLIER = 2.0
+
+# API Keys
+FINNHUB_API_KEY = 'ENTER_API_KEY'
+GROQ_API_KEY = 'ENTER_API_KEY'
+
