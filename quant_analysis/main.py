@@ -23,7 +23,7 @@ def main():
     index = build_faiss_index(embedding_matrix)
 
     print("Finding similar events...")
-    event_index = len(events) - 4  # Example: last event
+    event_index = len(events) - 4  # Example: last few events
     similar = find_similar_events(index, events, event_index)
 
     print("Explaining market movement...")
